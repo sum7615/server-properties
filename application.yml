@@ -4,13 +4,15 @@ eureka:
       defaultZone: http://localhost:8761/eureka/
 
 spring:
- profiles:
-  active: dev
+  profiles:
+    active: dev
+    group:
+      dev: common
+      test: common
+      prod: common
    
 management:
  endpoints:
   web:
    exposure:
     include: refresh
-
-
