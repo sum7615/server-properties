@@ -19,4 +19,4 @@ spring:
           predicates:
             - Path=/user/** 
           filters:
-            - RewritePath=/public/(?<segment>.*), /${segment}
+            - RewritePath=/user/(?<segment>.*), /${segment}
