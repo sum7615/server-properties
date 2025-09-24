@@ -6,3 +6,11 @@ spring:
       discovery:
         locator:
           enabled: true
+	routes:
+	- id: public-service
+          uri: lb://public-service   # lb:// enables load balancing through Eureka
+          predicates:
+            - Path=/public/** 
+          filters:
+            - RewritePath=/public/(?<segment>.*), /${segment}
+
