@@ -14,4 +14,9 @@ spring:
             - Path=/public/** 
           filters:
             - RewritePath=/public/(?<segment>.*), /${segment}
-
+        - id: user-service
+          uri: lb://user-service   # lb:// enables load balancing through Eureka
+          predicates:
+            - Path=/user/** 
+          filters:
+            - RewritePath=/public/(?<segment>.*), /${segment}
