@@ -2,7 +2,7 @@ server:
   port: 9090
 
 spring:
-    datasource:
+  datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/user_service
     username: application
@@ -28,3 +28,4 @@ spring:
           auth: true
           starttls:
             enable: true
+
