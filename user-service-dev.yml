@@ -33,4 +33,3 @@ spring:
             enable: true
 jwt:
   secret: "mY8xVt2c+9Rz2qvG5a0F7n6KbC4WjH8pLdN0QxBv1wM="
-  expiration: 3600000   # 1 hour in milliseconds
