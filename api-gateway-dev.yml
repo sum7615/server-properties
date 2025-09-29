@@ -30,6 +30,6 @@ api:
     - /user/register
     - /user/login
     - /user/refresh-token
-    - /user/check-user
   excluded-path-prefixes:
     - /public/
+    - /user/check-user
