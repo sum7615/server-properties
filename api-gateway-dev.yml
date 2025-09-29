@@ -24,8 +24,8 @@ spring:
           filters:
             - RewritePath=/user/(?<segment>.*), /${segment}
 jwt:
-  secret: "mY8xVt2c+9Rz2qvG5a0F7n6KbC4WjH8pLdN0QxBv1wM="
-gateway:
+  secret: "mY8xVt2c+9Rz2qvG5a0F7n6KbC4WjH8pLdN0QxBv1wM="  
+api:
   excluded-paths:
     - /user/register
     - /user/login
