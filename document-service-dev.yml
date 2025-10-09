@@ -14,7 +14,10 @@ spring:
       idle-timeout: 30000
       maximum-pool-size: 10
       minimum-idle: 5
-
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 document:
@@ -34,3 +37,15 @@ document:
   retry:
     max-attempts: 5
     backoff-ms: 2000
+  upload:
+    max-file-size: 52428800  # 50MB
+    allowed-content-types:
+      - "application/pdf"
+      - "image/jpeg" 
+      - "image/png"
+      - "text/plain"
+      - "application/msword"
+      - "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
+    virus-scan-enabled: true
+    cache-scan-results: true
+    scan-cache-hours: 24
