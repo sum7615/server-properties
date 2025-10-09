@@ -18,11 +18,17 @@ spring:
           filters:
             - RewritePath=/public/(?<segment>.*), /${segment}
         - id: user-service
-          uri: lb://user-service   # lb:// enables load balancing through Eureka
+          uri: lb://user-service
           predicates:
             - Path=/user/** 
           filters:
             - RewritePath=/user/(?<segment>.*), /${segment}
+        - id: document-service
+          uri: lb://document-service
+          predicates:
+            - Path=/doc/** 
+          filters:
+            - RewritePath=/doc/(?<segment>.*), /${segment}
 jwt:
   secret: "mY8xVt2c+9Rz2qvG5a0F7n6KbC4WjH8pLdN0QxBv1wM="  
 api:
