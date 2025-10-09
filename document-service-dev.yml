@@ -22,7 +22,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 document:
   storage:
-    root: ./data/uploads
+    root: /home/sumanpaul/Desktop/ms/uploads
     temp-ttl-hours: 24
     clean: clean
     quarantine: quarantine
