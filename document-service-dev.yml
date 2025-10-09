@@ -1,0 +1,36 @@
+server:
+  port: 9095
+
+spring:
+  redis:
+    host: localhost
+    port: 6379
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/document_service
+    username: application
+    password: Sum@7615
+    hikari:
+      idle-timeout: 30000
+      maximum-pool-size: 10
+      minimum-idle: 5
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+document:
+  storage:
+    root: /data/uploads
+    temp-ttl-hours: 24
+    clean: clean
+    quarantine: quarantine
+  scan:
+    workers: 8
+    archive-max-depth: 3
+    archive-max-uncompressed-mb: 500
+  disk:
+    low-threshold-mb: 1024
+  quick-scan:
+    enabled: true
+  retry:
+    max-attempts: 5
+    backoff-ms: 2000
