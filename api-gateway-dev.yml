@@ -30,6 +30,10 @@ api:
     - /user/register
     - /user/login
     - /user/refresh-token
+    - /user/address-type
+    - /user/lookup/country
   excluded-path-prefixes:
     - /public/
     - /user/check-user
+    - /user/lookup/city
+    - /user/lookup/state
