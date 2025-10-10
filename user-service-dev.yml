@@ -14,7 +14,11 @@ spring:
       idle-timeout: 30000
       maximum-pool-size: 10
       minimum-idle: 5
-
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 10MB
+      max-request-size: 10MB
   jpa:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
 
@@ -31,3 +35,19 @@ spring:
             enable: true
 jwt:
   secret: "mY8xVt2c+9Rz2qvG5a0F7n6KbC4WjH8pLdN0QxBv1wM="
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: FULL
+  circuitbreaker:
+    enabled: true
+resilience4j:
+  circuitbreaker:
+    instances:
+      DOCUMENT-SERVICE:
+        failure-rate-threshold: 50
+        sliding-window-size: 10
+        wait-duration-in-open-state: 10s
