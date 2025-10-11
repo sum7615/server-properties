@@ -62,6 +62,6 @@ document:
 app:
   kafka:
     topic:
-      user-events: doc-topic
+      doc-events: doc-topic
       notifications: notifications-topic
 
