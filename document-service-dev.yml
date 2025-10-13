@@ -50,7 +50,7 @@ document:
     cache-scan-results: true
     scan-cache-hours: 24
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: localhost:29092
     consumer:
       group-id: sp-xam
       auto-offset-reset: earliest
