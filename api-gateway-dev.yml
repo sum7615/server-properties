@@ -29,6 +29,13 @@ spring:
             - Path=/doc/** 
           filters:
             - RewritePath=/doc/(?<segment>.*), /${segment}
+        - id: test-service
+          uri: lb://test-service
+          predicates:
+            - Path=/test/** 
+          filters:
+            - RewritePath=/test/(?<segment>.*), /${segment}
+
 jwt:
   secret: "mY8xVt2c+9Rz2qvG5a0F7n6KbC4WjH8pLdN0QxBv1wM="  
 api:
